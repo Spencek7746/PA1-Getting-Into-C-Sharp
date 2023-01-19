@@ -14,14 +14,11 @@ public class Cat : Animal
 {
     public override void printInfo()
     {
-        name = "Aya";
-        age = 4;
-        weight = 9;
-    }
+        throw new NotImplementedException();
 
     public override void makeNoise()
     {
-        noise = "meow";
+        throw new NotImplementedException();
     }
 
     public override int ageUp()

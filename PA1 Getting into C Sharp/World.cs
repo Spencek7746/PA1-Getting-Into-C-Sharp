@@ -15,6 +15,5 @@ class World
     List<Animal> animalList = new List<Animal>();
     static public void main(String args[])
     {
-
     }
 }

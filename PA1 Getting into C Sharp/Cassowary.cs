@@ -14,14 +14,12 @@ public class Cassowary : Animal
 {
     public override void printInfo()
     {
-        name = "Devil Bird";
-        age = 24;
-        weight = 97;
+        throw new NotImplementedException();
     }
 
     public override void makeNoise()
     {
-        noise = "*Horrifying Growling/Rumbling Sounds*";
+        throw new NotImplementedException();
     }
 
     public override int ageUp()

@@ -14,14 +14,12 @@ public class Austin_Powers : Animal
 {
     public override void printInfo()
     {
-        name = "Austin Powers";
-        age = 42;
-        weight = 156;
+        throw new NotImplementedException();
     }
 
     public override void makeNoise()
     {
-        noise = "YEAHHH BAYBEE YEAHHH";
+        throw new NotImplementedException();
     }
 
     public override int ageUp()
