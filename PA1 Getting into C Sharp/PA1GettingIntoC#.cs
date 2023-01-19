@@ -1,11 +1,12 @@
 ﻿//Name: Spencer Karpati
-//Instructor: Dr. Kathleen Ericson
-//Class: CSCI 352
+//Filename: PA1GettingIntoC#
+//Date: 1/19/2023
 //Description: This program helps with learning C# and the concept of abstract and concrete classes.
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,21 +22,60 @@ namespace PA1_Getting_into_C_Sharp
             private String Noise;
             private int Weight;
 
-            public abstract void printInfo();
-            public abstract void makeNoise();
-            public abstract int ageUp();
+            public String name
+            {
+                get { return Name; }
+                set { Name = value; }
+            }
+            public int age
+            {
+                get { return Age; }
+                set { Age = value; }
+            }
+            public String noise
+            {
+                get { return Noise; }
+                set { Noise = value; }
+            }
+            public int weight
+            {
+                get { return Weight; }
+                set { Weight = value; }
+            }
+
+
+            public virtual void printInfo()
+            {
+                Console.WriteLine("Name: " + Name);
+                Console.Write("Age: " + Age);
+                Console.WriteLine(" years");
+                Console.Write("Weight: " + Weight);
+                Console.WriteLine(" pounds");
+            }
+            public virtual void makeNoise()
+            {
+                Console.WriteLine(Noise);
+            }
+            public virtual int ageUp()
+            {
+                Age = Age + 3;
+                Console.WriteLine("Age:");
+                return Age;
+            }
         }
 
         public class Cat : Animal
         {
             public override void printInfo()
             {
-                throw new NotImplementedException();
+                name = "Aya";
+                age = 4;
+                weight = 9;
             }
 
             public override void makeNoise()
             {
-                throw new NotImplementedException();
+                noise = "meow";
             }
 
             public override int ageUp()
@@ -48,12 +88,14 @@ namespace PA1_Getting_into_C_Sharp
             {
                 public override void printInfo()
                 {
-                    throw new NotImplementedException();
+                   name = "Devil Bird";
+                   age = 24;
+                   weight = 97;
                 }
 
                 public override void makeNoise()
                 {
-                    throw new NotImplementedException();
+                   noise = "*Horrifying Growling/Rumbling Sounds*";
                 }
 
                 public override int ageUp()
@@ -66,12 +108,14 @@ namespace PA1_Getting_into_C_Sharp
                 {
                     public override void printInfo()
                     {
-                        throw new NotImplementedException();
+                        name = "Austin Powers";
+                        age = 42;
+                        weight = 156;
                     }
 
                     public override void makeNoise()
                     {
-                        throw new NotImplementedException();
+                        noise = "YEAHHH BAYBEE YEAHHH";
                     }
 
                     public override int ageUp()
