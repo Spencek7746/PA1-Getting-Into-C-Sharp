@@ -10,33 +10,38 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaseClass
+abstract public class Animal
 {
-    abstract public class Animal
+    private string Name = "Animal";
+    private string Noise = "Default";
+    private int Age = 0;
+    private int Weight = 0;
+
+    public Animal(string name, string noise, int age, int weight)
     {
-        private string Name = "Animal";
-        private string Noise = "Default";
-        private int Age = 0;
-        private int Weight = 0;
-
-        public virtual void printInfo()
-        {
-            Console.WriteLine("Name: " + Name);
-            Console.Write("Age: " + Age);
-            Console.WriteLine(" years.");
-            Console.Write("Weight: " + Weight);
-            Console.WriteLine(" pounds.");
-        }
-
-        public virtual void makeNoise()
-        {
-            Console.WriteLine(Noise);
-        }
-
-        public virtual void ageUp()
-        {
-            Console.WriteLine(Age + 5);
-        }
+        Name = name;
+        Noise = noise;
+        Age = age;
+        Weight = weight;
     }
+
+    public virtual void printInfo()
+    {
+        Console.WriteLine("Name: " + Name);
+        Console.Write("Age: " + Age);
+        Console.WriteLine(" years.");
+        Console.Write("Weight: " + Weight);
+        Console.WriteLine(" pounds.");
+    }
+
+     public virtual void makeNoise()
+     {
+         Console.WriteLine(Noise);
+     }
+
+     public virtual void ageUp()
+     {
+         Console.WriteLine(Age + 5);
+     }
 }
 

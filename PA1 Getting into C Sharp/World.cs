@@ -9,16 +9,17 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
-using BaseClass;
 
 class World
 {
     List<Animal> animalList = new List<Animal>();
     static public void Main(String[] args)
     {
-        Cat cat = new Cat();
-        Cassowary cassowary = new Cassowary();
-        Austin_Powers Powers = new Austin_Powers();
+        Cat cat = new Cat("Cat", "Meow", 3, 9);
+        Cassowary cassowary = new Cassowary("Cassowary", "*Horrifying Rumbling Noises*", 27, 98);
+        Austin_Powers powers = new Austin_Powers("Austin Powers", "*YEAHH BAYBEE YEAHH*", 64, 172);
+
+        Console.WriteLine();
 
         cat.printInfo();
         cat.makeNoise();
@@ -32,9 +33,9 @@ class World
 
         Console.WriteLine();
 
-        Powers.printInfo();
-        Powers.makeNoise();
-        Powers.ageUp();
+        powers.printInfo();
+        powers.makeNoise();
+        powers.ageUp();
 
         Console.Read();
     }

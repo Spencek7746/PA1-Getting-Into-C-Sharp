@@ -12,18 +12,27 @@ using System.Threading.Tasks;
 
 public class Austin_Powers : Animal
 {
+    public Austin_Powers(string name, string noise, int age, int weight) : base(name, noise, age, weight)
+    {
+        Console.WriteLine("Powers inherits Animal's parameterized constructor");
+    }
+
     public override void printInfo()
     {
+        base.printInfo();
         Console.WriteLine("Alias: International Man of Mystery");
         Console.WriteLine("Vehicle: ShagMobile");
     }
     public override void makeNoise()
     {
+        base.makeNoise();
         Console.WriteLine("Shagadelic");
     }
 
     public override void ageUp()
     {
         Console.WriteLine("I still have my mojo baybee");
+        Console.Write("Age: ");
+        base.ageUp();
     }
 }
