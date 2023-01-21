@@ -9,21 +9,22 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using BaseClass;
 
 public class Cassowary : Animal
 {
     public override void printInfo()
-    {
-        throw new NotImplementedException();
+    { 
+        Console.WriteLine("Better Name: Devil Bird");
     }
 
     public override void makeNoise()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("*Dinosaur-Like Sounds*");
     }
 
-    public override int ageUp()
+    public override void ageUp()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("The Cassowary has gotten older.");
     }
 }

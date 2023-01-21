@@ -9,20 +9,22 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using BaseClass;
 
 public class Cat : Animal
 {
     public override void printInfo()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Likes: Catnip, Acting like an absolute buffoon when you are trying to sleep");
+    }
 
     public override void makeNoise()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Purrrrrrr");
     }
 
-    public override int ageUp()
+    public override void ageUp()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("The cat has gotten older.");
     }
 }

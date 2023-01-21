@@ -9,21 +9,22 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using BaseClass;
 
 public class Austin_Powers : Animal
 {
     public override void printInfo()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Alias: International Man of Mystery");
+        Console.WriteLine("Vehicle: ShagMobile");
     }
-
     public override void makeNoise()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Shagadelic");
     }
 
-    public override int ageUp()
+    public override void ageUp()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("I still have my mojo baybee");
     }
 }

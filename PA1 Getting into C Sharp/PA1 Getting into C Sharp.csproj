@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEA04C54-BEBE-4379-B2D3-1CA0643CDDB3}</ProjectGuid>
+    <ProjectGuid>{E881339B-8765-4A5A-B4C7-453CC92346D5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PA1_Getting_into_C_Sharp</RootNamespace>
-    <AssemblyName>PA1 Getting into C Sharp</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PA1GettingIntoC#.cs" />
+    <Compile Include="Animal.cs;AustinPowers.cs;Cassowary.cs;Cat.cs;World.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

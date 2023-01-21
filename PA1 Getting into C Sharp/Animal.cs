@@ -10,16 +10,33 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PA1_Getting_into_C_Sharp
+namespace BaseClass
 {
     abstract public class Animal
     {
-        private String Name; Noise;
-        private int Age; Weight;
+        private string Name = "Animal";
+        private string Noise = "Default";
+        private int Age = 0;
+        private int Weight = 0;
 
-        public abstract void printInfo();
-        public virtual void makeNoise();
-        public virtual int ageUp();
+        public virtual void printInfo()
+        {
+            Console.WriteLine("Name: " + Name);
+            Console.Write("Age: " + Age);
+            Console.WriteLine(" years.");
+            Console.Write("Weight: " + Weight);
+            Console.WriteLine(" pounds.");
+        }
+
+        public virtual void makeNoise()
+        {
+            Console.WriteLine(Noise);
+        }
+
+        public virtual void ageUp()
+        {
+            Console.WriteLine(Age + 5);
+        }
     }
 }
 
