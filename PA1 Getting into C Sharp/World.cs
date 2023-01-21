@@ -17,7 +17,7 @@ class World
     {
         Cat cat = new Cat("Cat", "Meow", 3, 9);
         Cassowary cassowary = new Cassowary("Cassowary", "*Horrifying Rumbling Noises*", 27, 98);
-        Austin_Powers powers = new Austin_Powers("Austin Powers", "*YEAHH BAYBEE YEAHH*", 64, 172);
+        Austin_Powers powers = new Austin_Powers("Austin Powers", "YEAHH BAYBEE YEAHH", 64, 172);
 
         Console.WriteLine();
 
