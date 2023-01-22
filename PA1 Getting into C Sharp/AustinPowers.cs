@@ -10,16 +10,17 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Austin_Powers : Animal
+public class Austin_Powers : Animal //The Austin_Powers class will inherit Animal's methods and variables.
 {
-    public Austin_Powers(string name, string noise, int age, int weight) : base(name, noise, age, weight)
+    public Austin_Powers(string name, string noise, int age, int weight) : base(name, noise, age, weight) //The Animal parameterized constructor has been inherited. This will help with creating a powers object in main.
     {
         Console.WriteLine("Powers inherits Animal's parameterized constructor");
     }
 
+    //Each method from Animal will be overridden by the Austin_Powers class to add more upon the inherited implementation.
     public override void printInfo()
     {
-        base.printInfo();
+        base.printInfo(); //Calling base implementaion.
         Console.WriteLine("Alias: International Man of Mystery");
         Console.WriteLine("Vehicle: ShagMobile");
     }
