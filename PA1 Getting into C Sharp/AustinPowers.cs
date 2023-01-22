@@ -32,6 +32,7 @@ public class Austin_Powers : Animal //The Austin_Powers class will inherit Anima
 
     public override void ageUp()
     {
+        Console.WriteLine("Powers has gotten older.");
         Console.WriteLine("I still have my mojo baybee");
         Console.Write("Age: ");
         base.ageUp();
