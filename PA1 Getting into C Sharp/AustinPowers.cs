@@ -17,6 +17,34 @@ public class Austin_Powers : Animal //The Austin_Powers class will inherit Anima
         Console.WriteLine("Powers inherits Animal's parameterized constructor");
     }
 
+    public void printPowers(string choice)
+    {
+        Console.WriteLine("Please enter a number to continue:");
+        Console.WriteLine("1: Show info");
+        Console.WriteLine("2: Make noise");
+        Console.WriteLine("3: Age up");
+
+        switch (choice)
+        {
+            case "1":
+                printInfo(); //Calling inherited methods.
+                Console.WriteLine();
+                break;
+            case "2":
+                makeNoise();
+                Console.WriteLine();
+                break;
+            case "3":
+                ageUp();
+                Console.WriteLine();
+                break;
+            default:
+                Console.WriteLine("Please enter a valid number from the choices shown.");
+                Console.WriteLine();
+                break;
+        }
+    }
+
     //Each method from Animal will be overridden by the Austin_Powers class to add more upon the inherited implementation.
     public override void printInfo()
     {

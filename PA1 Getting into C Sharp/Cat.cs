@@ -17,6 +17,29 @@ public class Cat : Animal //The Cat class will inherit Animal's methods and vari
         Console.WriteLine("Cat inherits Animal's parameterized constructor");
     }
 
+    public void printCat(string choice)
+    {
+        switch (choice)
+        {
+            case "1":
+                printInfo(); //Calling inherited methods.
+                Console.WriteLine();
+                break;
+            case "2":
+                makeNoise();
+                Console.WriteLine();
+                break;
+            case "3":
+                ageUp();
+                Console.WriteLine();
+                break;
+            default:
+                Console.WriteLine("Please enter a valid number from the choices shown.");
+                Console.WriteLine();
+                break;
+        }
+    }
+
     //Each method from Animal will be overridden by the cat class to add more upon the inherited implementation.
     public override void printInfo()
     {

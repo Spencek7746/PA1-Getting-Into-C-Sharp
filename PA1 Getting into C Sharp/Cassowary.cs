@@ -18,6 +18,29 @@ public class Cassowary : Animal //The Cassowary class will inherit Animal's meth
         Console.WriteLine("Cassowary inherits Animal's parameterized constructor");
     }
 
+    public void printCassowary(string choice)
+    {
+        switch (choice)
+        {
+            case "1":
+                printInfo(); //Calling inherited methods.
+                Console.WriteLine();
+                break;
+            case "2":
+                makeNoise();
+                Console.WriteLine();
+                break;
+            case "3":
+                ageUp();
+                Console.WriteLine();
+                break;
+            default:
+                Console.WriteLine("Please enter a valid number from the choices shown.");
+                Console.WriteLine();
+                break;
+        }
+    }
+
     //Each method from Animal will be overridden by the Cassowary class to add more upon the inherited implementation.
     public override void printInfo()
     {

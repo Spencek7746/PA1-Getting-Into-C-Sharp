@@ -14,11 +14,11 @@ Pick *PA1 Getting into C Sharp.csproj* and click the green arrow. If everything 
 Linux(Preferred) or Windows Terminal: -> Extract the folder to any directory of your choice. Open a Linux(ctrl+alt+t) or Windows(winkey+r, cmd) command prompt.
 Use command ```cd``` to change into the folder directory. You can compile the project as follows:
 
-```csc Animal.cs Cat.cs Cassowary.cs AustinPowers.cs World.cs```
+```csc Animal.cs Cat.cs Cassowary.cs AustinPowers.cs Menu .cs World.cs```
 
 You should now have a .exe file. Use command ```ls``` to view the executable name. To run it, simple type *executablename.exe* to run the file.
 
-You should see a menu, just read the instructions and simply type a number for the submenu or option you want to access. For option 4, you will be instructed 
+You should see a menu, just read the instructions and simply type a number for the submenu or option you want to access. For option 1, you will be instructed 
 to provide a name, noise, age, and weight. This is neccessary to create your animal and document it.
 
 DESIGN CHOICES:
@@ -27,7 +27,9 @@ the derived classes since the methods they inherit are implemented(mostly, still
 a neat uniform implementation between all of them. The methods of the Animal class are declared ```virtual``` so that they can have a declared body. This way, I can 
 already add the most basic implemention to these methods and override them in the derived classes to add even more while still having the base implmentation. I also 
 added a Animal parameterized constructor to set public parameters to my private Animal variables. This helps with creating any other derived class object in main as 
-well as making a custom derived class object for the user.
+well as making a custom derived class object for the user. The menu interface has been completely implemented as its own ```Menu``` class. I did this because I wanted
+main to be as clean as possible as well as to be able to use functions to print different menu sets. I have used switches for my menu as I believe they are very simple
+and straight forward for the user and are easy to understand when reading the code.
 
 
 Spencer Karpati - University of Tennessee at Martin - CSCI352
