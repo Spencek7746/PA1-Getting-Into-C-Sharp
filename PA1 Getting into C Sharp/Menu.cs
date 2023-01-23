@@ -1,3 +1,8 @@
+//Name: Spencer Karpati
+//Filename: Cat.cs
+//Date: 1/23/2023
+//Description: This is the Menu Subclass.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +21,7 @@ public class Menu
         Console.WriteLine("3: Age up");
     }
 
-    public void printList()
+    public void printList() //Function to print the list of animals.
     {
         Console.WriteLine("List of added animals:");
         foreach (var animal in animals) //foreach method acquired from https://www.dotnetperls.com/list
@@ -25,7 +30,7 @@ public class Menu
         }
     }
 
-    public void getInfo()
+    public void getInfo() //Function to get the name, noise, age, and weight of a custom animal the user wants to implement.
     {
         Console.WriteLine("Please enter the name of the animal you want to add:");
         string animalName = Console.ReadLine();
@@ -46,7 +51,7 @@ public class Menu
         animals.Add(new Cat(animalName, animalNoise, animalAge, animalWeight)); //Using user input to create a new animal object.
     }
 
-    public void printMenu()
+    public void printMenu() //Function to print menu interface.
     {
         animals.Add(new Cat("Cat", "Meow", 3, 9));
         animals.Add(new Cassowary("Cassowary", "*Horrifying Rumbling Noises*", 27, 98));
