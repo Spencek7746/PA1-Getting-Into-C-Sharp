@@ -1,6 +1,6 @@
 //Name: Spencer Karpati
 //Filename: Cassowary.cs
-//Date: 1/19/2023
+//Date: 1/23/2023
 //Description: This is the Cassowary Subclass.
 
 using System;
@@ -18,7 +18,7 @@ public class Cassowary : Animal //The Cassowary class will inherit Animal's meth
         Console.WriteLine("Cassowary inherits Animal's parameterized constructor");
     }
 
-    public void printCassowary(string choice)
+    public void printCassowary(string choice) //function to print cassowary related info
     {
         switch (choice)
         {

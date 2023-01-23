@@ -1,6 +1,6 @@
 //Name: Spencer Karpati
 //Filename: AustinPowers.cs
-//Date: 1/19/2023
+//Date: 1/23/2023
 //Description: This is the Austin Powers Subclass.
 
 using System;
@@ -17,7 +17,7 @@ public class Austin_Powers : Animal //The Austin_Powers class will inherit Anima
         Console.WriteLine("Powers inherits Animal's parameterized constructor");
     }
 
-    public void printPowers(string choice)
+    public void printPowers(string choice) //function to print powers releated info
     {
         Console.WriteLine("Please enter a number to continue:");
         Console.WriteLine("1: Show info");

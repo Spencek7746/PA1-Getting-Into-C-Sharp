@@ -17,7 +17,7 @@ public class Cat : Animal //The Cat class will inherit Animal's methods and vari
         Console.WriteLine("Cat inherits Animal's parameterized constructor");
     }
 
-    public void printCat(string choice)
+    public void printCat(string choice) //function to print cat releated info
     {
         switch (choice)
         {

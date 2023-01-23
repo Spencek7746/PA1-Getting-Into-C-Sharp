@@ -1,6 +1,6 @@
 ﻿//Name: Spencer Karpati
 //Filename: Animal.cs
-//Date: 1/19/2023
+//Date: 1/23/2023
 //Description: This is the abstract Animal Superclass.
 
 using System;
