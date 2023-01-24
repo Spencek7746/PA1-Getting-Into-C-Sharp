@@ -18,8 +18,9 @@ Use command ```cd``` to change into the folder directory. You can compile the pr
 
 You should now have a .exe file. Use command ```ls``` to view the executable name. To run it, simple type *executablename.exe* to run the file.
 
-You should see a menu, just read the instructions and simply type a number for the submenu or option you want to access. For option 1, you will be instructed 
-to provide a name, noise, age, and weight. This is neccessary to create your animal and document it.
+You should see a menu, just read the instructions and simply type a number for the option you want to access. For option 1, you will be instructed 
+to provide a name, noise, age, and weight. This is neccessary to create your animal and document it. There are only 3 types of animals to create: 
+a cat, a Cassowary, and a secret "animal".
 
 DESIGN CHOICES:
 The Animal class is abstract so it can be used as a preset for all of the classes that inherit it's methods and variables. This makes it a lot easier to implement 

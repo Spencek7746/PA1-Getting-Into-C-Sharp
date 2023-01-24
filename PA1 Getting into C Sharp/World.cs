@@ -17,7 +17,6 @@ class World
     static public void Main(String[] args) // Main driver
     {
         Menu menu = new Menu();
-
         menu.printMenu();
 
         Console.WriteLine();
