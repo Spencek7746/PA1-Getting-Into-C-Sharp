@@ -16,7 +16,6 @@ class World
 {
     static public void Main(String[] args) // Main driver
     {
-        World world = new World();
         Menu menu = new Menu();
 
         menu.printMenu();

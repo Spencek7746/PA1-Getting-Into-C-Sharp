@@ -20,6 +20,7 @@ public class Menu
         Console.WriteLine("1: Show info");
         Console.WriteLine("2: Make noise");
         Console.WriteLine("3: Age up");
+        Console.WriteLine("WORK IN PROGRESS");
     }
 
     public void refreshMenu()
@@ -98,7 +99,7 @@ public class Menu
                     break;
 
                 case "3":
-                    Console.WriteLine("IN PROGRESS");
+                    printSubMenu();
                     refreshMenu();
                     break;
 
