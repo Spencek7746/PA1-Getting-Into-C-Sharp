@@ -29,7 +29,7 @@ public class Menu
         userKey = Console.ReadKey();
         if (userKey != null)
         {
-            Console.Clear();
+            Console.Clear(); //Clear console idea gotten from Stack Exchange
             printMenu();
         }
     }
