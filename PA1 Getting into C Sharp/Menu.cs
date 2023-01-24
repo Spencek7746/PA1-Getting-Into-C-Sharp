@@ -1,7 +1,7 @@
 //Name: Spencer Karpati
 //Filename: Menu.cs
 //Date: 1/23/2023
-//Description: This is the Menu Subclass.
+//Description: This is the Menu class.
 
 using System;
 using System.Collections.Generic;
