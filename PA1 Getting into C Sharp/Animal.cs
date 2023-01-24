@@ -17,7 +17,7 @@ abstract public class Animal //This is the Animal abstract class. it will serve 
     private int Age = 0;
     private int Weight = 0;
 
-    public Animal(string name, string noise, int age, int weight) //Animal parameterized constructor which will help creating objects in main.
+    public Animal(string name, string noise, int age, int weight) //Animal parameterized constructor which will help children create objects in main.
     {
         Name = name;
         Noise = noise;

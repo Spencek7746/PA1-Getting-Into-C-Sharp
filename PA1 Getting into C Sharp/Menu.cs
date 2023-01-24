@@ -1,10 +1,11 @@
 //Name: Spencer Karpati
-//Filename: Cat.cs
+//Filename: Menu.cs
 //Date: 1/23/2023
 //Description: This is the Menu Subclass.
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -21,12 +22,32 @@ public class Menu
         Console.WriteLine("3: Age up");
     }
 
+    public void refreshMenu()
+    {
+        Console.WriteLine("Press any key to continue..."); //If the user presses any key after choice, clear console and refresh menu
+        ConsoleKeyInfo userKey;
+        userKey = Console.ReadKey();
+        if (userKey != null)
+        {
+            Console.Clear();
+            printMenu();
+        }
+    }
+
     public void printList() //Function to print the list of animals.
     {
-        Console.WriteLine("List of added animals:");
-        foreach (var animal in animals) //foreach method acquired from https://www.dotnetperls.com/list
+        if (animals.Count == 0)
         {
-            Console.WriteLine(animal.GetType());
+            Console.WriteLine("Empty! You need to add some animals!");
+        }
+
+        else
+        {
+            foreach (var animal in animals) //foreach method acquired from https://www.dotnetperls.com/list
+            {
+                Console.WriteLine("List of added animals:");
+                Console.WriteLine(animal.ToString());
+            }
         }
     }
 
@@ -53,10 +74,6 @@ public class Menu
 
     public void printMenu() //Function to print menu interface.
     {
-        animals.Add(new Cat("Cat", "Meow", 3, 9));
-        animals.Add(new Cassowary("Cassowary", "*Horrifying Rumbling Noises*", 27, 98));
-        animals.Add(new Austin_Powers("Austin Powers", "YEAHH BAYBEE YEAHH", 64, 172));
-
         Console.WriteLine("Welcome to Spencer's Animal Emporium. Please enter a number to continue:"); //Creation of user menu.
         Console.WriteLine("1: Add an animal!");
         Console.WriteLine("2: Print list of animals");
@@ -66,29 +83,32 @@ public class Menu
         string userChoice = Console.ReadLine(); //Reading user's input for switch menu.
         Console.WriteLine(); //Beginning of sentinel while loop
 
-        while (userChoice != "5") //While user doesn't choose option 5, keep running.
+        while (userChoice != "4") //While user doesn't choose option 4, keep running.
         {
             switch (userChoice)
             {
                 case "1": //If user chooses 1, the user will be prompted with 4 questions and their input will be stored to make a new animal object.
                     getInfo();
+                    refreshMenu();
                     break;
 
                 case "2":
-                   printList();
+                    printList();
+                    refreshMenu();
                     break;
 
                 case "3":
                     Console.WriteLine("IN PROGRESS");
+                    refreshMenu();
                     break;
 
                 case "4":
-                    Console.WriteLine("Exiting...");
                     System.Environment.Exit(0); //If 4 is chosen, exit the program.
                     break;
 
                 default: //Condition for if user does not choose a valid option.
                     Console.WriteLine("Please enter a valid number from the choices shown.");
+                    refreshMenu();
                     break;
             }
             Console.ReadLine(); //Ending of sentinel loop.
