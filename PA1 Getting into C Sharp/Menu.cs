@@ -54,7 +54,7 @@ public class Menu
 
     public void getInfo() //Function to get the name, noise, age, and weight of a custom animal the user wants to implement.
     {
-        Console.WriteLine("Please enter the name of the animal you want to add:");
+        Console.WriteLine("Please enter the name of the animal you want to add (Cat, Cassowary, or Secret...):");
         string animalName = Console.ReadLine();
         Console.WriteLine();
 
@@ -70,7 +70,20 @@ public class Menu
         int animalWeight = Int32.Parse(Console.ReadLine());
         Console.WriteLine();
 
-        animals.Add(new Cat(animalName, animalNoise, animalAge, animalWeight)); //Using user input to create a new animal object.
+        if(animalName == "cat" || animalName == "Cat")
+        {
+            animals.Add(new Cat(animalName, animalNoise, animalAge, animalWeight)); //Using user input to create a new animal object.
+        }
+
+        else if(animalName == "cassowary" || animalName == "Cassowary")
+        {
+            animals.Add(new Cassowary(animalName, animalNoise, animalAge, animalWeight)); //Using user input to create a new animal object.
+        }
+
+         else if(animalName == "secret" || animalName == "Secret")
+        {
+            animals.Add(new Austin_Powers("Austin Powers", "YEAHH BAYBEE YEAH", 67, 184)); //Using user input to create a new animal object.
+        }
     }
 
     public void printMenu() //Function to print menu interface.
